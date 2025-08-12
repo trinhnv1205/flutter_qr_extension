@@ -14,23 +14,47 @@ To use this project as a Chrome extension, follow the steps below:
     git clone https://github.com/sbis04/flutter_qr_extension.git
     ```
 
-2. From the project directory, run:
+2. Navigate to the project directory:
    
    ```sh
-   flutter build web --web-renderer html --csp
+   cd flutter_qr_extension
    ```
 
-3. Go to the following URL from Chrome browser:
+3. From the project directory, run:
+   
+   ```sh
+   flutter build web --csp
+   ```
+   
+   **Note:** The `--web-renderer html` flag is no longer needed in newer Flutter versions as HTML renderer is now the default for web builds.
+
+4. Go to the following URL from Chrome browser:
    
    ```url
    chrome://extensions
    ```
 
-4. Enable the **Developer mode**.
+5. Enable the **Developer mode** (toggle in the top right corner).
 
-5. Click **Load unpacked**. Select the `<project_dir>/build/web` folder.
+6. Click **Load unpacked**. Select the `<project_dir>/build/web` folder.
 
 This will install the extension to your Chrome browser and then you will be able to access the extension by clicking on the **extension icon**.
+
+## Development
+
+For development and testing, you can run the Flutter app directly in Chrome:
+
+```sh
+flutter run -d chrome
+```
+
+This allows you to test the functionality before building the extension.
+
+## Requirements
+
+- Flutter SDK (latest stable version recommended)
+- Chrome browser
+- Developer mode enabled in Chrome extensions
 
 ## License
 
