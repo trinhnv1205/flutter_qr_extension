@@ -1,12 +1,12 @@
-# Flutter QR code generator - Chrome extension
+# Flutter QR Code Generator
 
-Chrome extension created using Flutter for generating QR code from either a text or URL. The QR code's background and foreground colors are also customizable.
+A Flutter web application for generating QR codes from text or URLs. The QR code's background and foreground colors are customizable.
 
-![Chrome extension in action](screenshots/qr-code-ext-demo.gif)
+![QR Code Generator in action](screenshots/qr-code-ext-demo.gif)
 
 ## Usage
 
-To use this project as a Chrome extension, follow the steps below:
+To run this project as a Flutter web application, follow the steps below:
 
 1. Clone this project using:
    
@@ -23,22 +23,16 @@ To use this project as a Chrome extension, follow the steps below:
 3. From the project directory, run:
    
    ```sh
-   flutter build web --csp
+   flutter build web
    ```
    
-   **Note:** The `--web-renderer html` flag is no longer needed in newer Flutter versions as HTML renderer is now the default for web builds.
-
-4. Go to the following URL from Chrome browser:
+   Or to run in development mode:
    
-   ```url
-   chrome://extensions
+   ```sh
+   flutter run -d chrome
    ```
 
-5. Enable the **Developer mode** (toggle in the top right corner).
-
-6. Click **Load unpacked**. Select the `<project_dir>/build/web` folder.
-
-This will install the extension to your Chrome browser and then you will be able to access the extension by clicking on the **extension icon**.
+4. Open the generated web application by serving the `build/web` folder or accessing it via your local development server.
 
 ## Development
 
@@ -48,13 +42,29 @@ For development and testing, you can run the Flutter app directly in Chrome:
 flutter run -d chrome
 ```
 
-This allows you to test the functionality before building the extension.
+This allows you to test the functionality in real-time with hot reload.
+
+## Deployment
+
+After building for web, you can deploy the contents of the `build/web` folder to any web hosting service such as:
+
+- GitHub Pages
+- Netlify
+- Vercel
+- Firebase Hosting
+- Or any static hosting provider
 
 ## Requirements
 
 - Flutter SDK (latest stable version recommended)
-- Chrome browser
-- Developer mode enabled in Chrome extensions
+- Chrome browser (or any modern web browser)
+
+## Features
+
+- Generate QR codes from text or URLs
+- Customizable foreground and background colors
+- Responsive design for web
+- Clean and intuitive user interface
 
 ## License
 
